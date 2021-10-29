@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>290</width>
+    <height>448</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>290</width>
+    <height>448</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>290</width>
+    <height>448</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MC.UPG  V1.1</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTextEdit{		
+	
+	background-color: rgb(130, 162, 172);
+	border:1px solid rgb(173, 216, 230);
+	color: back;
+}
+/****************************************************************/
+QScrollBar:vertical{
+	border:2px solid rgb(173, 216, 230);
+	background:lightblue;
+	width: 20px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+QScrollBar::handle:vertical{
+	width:8px;
+	background:rgb(170, 211, 225);
+	min-height:30px;
+	margin: 1px 0px 1px 1px;
+}
+QScrollBar::add-line:vertical   
+{
+    height:20px;width:18px;
+    subcontrol-position:bottom;
+	background:rgb(173, 216, 230);
+	border: 1px solid rgb(155, 155, 155);
+	
+	image: url(:/image/arrow_down.png);
+}
+QScrollBar::sub-line:vertical   
+{
+    height:20px;width:18px;
+    subcontrol-position:top;
+	background:rgb(173, 216, 230);
+	border: 1px solid rgb(155, 155, 155);
+	
+	image: url(:/image/arrow_up.png);
+}
+/**************************QPushButton*************************/
+QPushButton{
+	background-color:lightblue;
+	border:1px solid rgb(119, 149, 158);
+	border-radius:0px;
+	font:15px bold Khmer UI
+}
+QPushButton:hover{
+	/*border:1px solid blue;*/
+	background:rgb(170, 211, 225);
+}
+QPushButton:pressed{
+	background: rgb(125, 155, 165);
+}
+/**************************组合框***********************/
+QComboBox{
+	background-color: lightblue;
+	border: 1px solid rgb(119, 149, 158);
+	border-radius: 0px;
+	padding:1px 2px 1px 2px;
+	font:15px bold Khmer UI
+}
+QComboBox:hover {
+	background:rgb(170, 211, 225);
+}
+QComboBox::dowm-arrow{
+	
+}
+QComboBox::drop-down{
+	subcontrol-origin:padding;
+	subcontrol-position: top right;
+	width:13px;
+	
+	border-left-width:2px;
+	border-left-color:rgb(119, 149, 158);
+	border-left-style:solid;
+
+	image: url(:/image/arrow_down.png);
+}
+/******************************QTabWidget************************/
+QTabWidget::pane{
+	border: 2px solid lightblue;
+}
+QTabWidget::tab-bar{
+	left: 50px;
+}
+QTabBar::tab{
+    background:lightblue;
+    border: 1px solid rgb(119, 149, 158);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    min-width: 30ex;
+    padding: 2px;	
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+	background:rgb(170, 211, 225);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: lightblue; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}
+QTabBar::tab:selected {
+    /* expand/overlap to the left and right by 4px */
+    margin-left: -1px;
+    margin-right: -1px;
+}
+QTabBar::tab:first:selected {
+    margin-left: 0; /* the first selected tab has nothing to overlap with on the left */
+}
+
+QTabBar::tab:last:selected {
+    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+}
+
+QTabBar::tab:only-one {
+    margin: 0; /* if there is only one tab, we don't want overlapping margins */
+}
+/****************************Progress Bar***************************/
+QProgressBar{
+	border:2px solid rgb(119, 149, 158);
+	text-align:center;
+}
+QProgressBar::chunk{
+	background-color:rgb(173, 216, 230);
+	width:20px;
+	margin:0.5px;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="usartBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>271</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Information</string>
+   </property>
+   <widget class="QTextEdit" name="loadTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>251</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>251</width>
+      <height>291</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>251</width>
+      <height>291</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Khmer UI</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fileEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>189</x>
+      <y>370</y>
+      <width>71</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>12 Khmer UI</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="uNameBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>370</y>
+      <width>130</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>99</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>130</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fileButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>320</y>
+      <width>70</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>20</width>
+      <height>10</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sizeLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>121</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>121</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Size：0     B</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="refreshButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>41</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&gt;&gt;</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="loadProgressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>true</bool>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="textDirection">
+     <enum>QProgressBar::TopToBottom</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>400</y>
+      <width>70</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>12 Khmer UI</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Upload</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
